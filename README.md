@@ -182,6 +182,30 @@ pipeline {
 }
 ```
 
+## jenkins 계정 권한 설정
+
+1. `Matrix Authorization Strategy` 플러그인 설치
+
+2. Jenkins 관리 > Configure Global Security > Authentication > Authorization 에서 Matrix-based security
+
+3. 다음처럼 설정
+
+![jenkins-account-security.png](./assets/images/jenkins-account-security.png)
+
+## jenkins 웹훅
+
+1. 플러그인설치
+   ![jenkins-webhook-플러그인설치.png](./assets/images/jenkins-webhook-플러그인설치.png)
+
+2. webhook-활성화
+   ![jenkins-webhook-활성화.png](./assets/images/jenkins-webhook-활성화.png)
+
+3. 토큰 값 추가
+   ![jenkins-webhook-브랜치필터.png](./assets/images/jenkins-webhook-브랜치필터.png)
+
+4. 특정 브랜치필터
+   ![jenkins-webhook-브랜치필터.png](./assets/images/jenkins-webhook-브랜치필터.png)
+
 ## Reference
 
 https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/
