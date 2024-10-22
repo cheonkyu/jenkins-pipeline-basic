@@ -206,6 +206,24 @@ pipeline {
 4. 특정 브랜치필터
    ![jenkins-webhook-브랜치필터.png](./assets/images/jenkins-webhook-브랜치필터.png)
 
+## jenkins 빌드파라미터 추가 및 읽기
+
+![pipeline-generator-link-min](./assets/images/pipeline-generator-link-min.png)
+
+![pipeline-generator-min](./assets/images/pipeline-generator-min.png)
+
+`params.필드명`으로 접근
+
+```
+stage('Deploy to Production') {
+    steps {
+            sh """
+            echo $params.ENVIRONMENT
+            """
+    }
+}
+```
+
 ## Reference
 
 https://www.jenkins.io/doc/pipeline/steps/publish-over-ssh/
@@ -215,3 +233,5 @@ https://stackoverflow.com/questions/39171341/load-file-with-environment-variable
 https://ws-pace.tistory.com/136
 
 https://not-to-be-reset.tistory.com/428
+
+https://devopscube.com/declarative-pipeline-parameters/
